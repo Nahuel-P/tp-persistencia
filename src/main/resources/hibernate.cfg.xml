@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <!--<property name="connection.=">com.mysql.cj.jdbc.Driver</property>-->
+        <!-- SQL dialect -->
+        <!--<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>-->
+
+        <!-- Disable the second-level cache -->
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+
+        <mapping class="ar.edu.unq.epers.tactics.modelo.Aventurero" />
+        <mapping class="ar.edu.unq.epers.tactics.modelo.Party" />
+        <mapping class="ar.edu.unq.epers.tactics.modelo.Pelea" />
+        <mapping class="ar.edu.unq.epers.tactics.modelo.tacticas.Tactica" />
+        <mapping class="ar.edu.unq.epers.tactics.modelo.habilidades.Habilidad" />
+        <mapping class="ar.edu.unq.epers.tactics.modelo.habilidades.AtaqueFisico" />
+        <mapping class="ar.edu.unq.epers.tactics.modelo.habilidades.AtaqueMagico" />
+        <mapping class="ar.edu.unq.epers.tactics.modelo.habilidades.Curar" />
+        <mapping class="ar.edu.unq.epers.tactics.modelo.habilidades.Defensa" />
+        <mapping class="ar.edu.unq.epers.tactics.modelo.habilidades.Meditar" />
+        <mapping class="ar.edu.unq.epers.tactics.modelo.Clase" />
+        <mapping class="ar.edu.unq.epers.tactics.modelo.Item" />
+
+    </session-factory>
+</hibernate-configuration>
